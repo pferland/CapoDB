@@ -17,6 +17,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#JetBrains Folder Files.
+.idea/
+
 # =========================
 # Operating System Files
 # =========================
