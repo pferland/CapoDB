@@ -17,7 +17,13 @@ Random Intervals -> CapoDB -> Read-me
 		Boston, MA  02110-1301 USA
 		
 	Or go here:  http://www.gnu.org/licenses/gpl-2.0.txt
-		
+
+  Summary:
+  
+	Capo being Italian for Chef, I thought was a  fitting name for a Recipe Database. 
+	That and the French word for Chef is... well.. Chef... so that didn't make for a 
+	very unique of an Application name and was kind of boring...
+	
   Requirements:
 	WWW:
 		PHP 5.3 or later
