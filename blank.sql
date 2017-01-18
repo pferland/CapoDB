@@ -3,7 +3,7 @@ CREATE TABLE CapoDB.RecipesIndex
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   title VARCHAR(255) NOT NULL,
   category VARCHAR(255) NOT NULL,
-  created_on INT NOT NULL,
+  created_on VARCHAR(24) NOT NULL,
   created_by VARCHAR(255) DEFAULT 'AnonCoward',
   hash VARCHAR(64) NOT NULL
 );

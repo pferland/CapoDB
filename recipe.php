@@ -22,18 +22,17 @@ if not, write to the
 require "lib/config.php"; #www config
 require "lib/CapoDBFront.inc.php"; #CapoDB Front end class
 
-#setup smarty
-#init CapoDB Front end class
 $CapoDB = new CapoDBFront($WWWconfig);
 
-$CapoDB->GetRecipes();
+$CapoDB->GetRecipe($_GET['hash']);
 
-if($CapoDB->debug)
+if(!$CapoDB->debug)
 {
-    var_dump($CapoDB->AllRecipes);
+    var_dump($CapoDB->Recipe);
+    var_dump($CapoDB->RecipePictures);
 }else
 {
-    $CapoDB->smarty->assign("recipes", $CapoDB->AllRecipes);
-    $CapoDB->smarty->display("index.tpl");
+    $CapoDB->smarty->assign("Recipe", $CapoDB->Recipe);
+    $CapoDB->smarty->assign("RecipePictures", $CapoDB->RecipePictures);
+    $CapoDB->smarty->display("recipe.tpl");
 }
-

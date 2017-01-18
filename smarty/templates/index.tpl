@@ -1,17 +1,31 @@
 ﻿{include file="header.tpl"}
-	<table>
+	<table class="table_all">
+		<tr>
+			<th class="headers">
+				Title
+			</th>
+			<th class="headers">
+				Category
+			</th>
+			<th class="headers">
+				Created By
+			</th>
+			<th class="headers">
+				Created On
+			</th>
+		</tr>
 		{foreach from=$recipes item="recipe"}
 		<tr>
-			<td>
-				{$recipe.title}
+			<td class="data">
+				<a href="recipe.php?hash={$recipe.hash}">{$recipe.title}</a>
 			</td>
-			<td>
+			<td class="data">
 				{$recipe.category}
 			</td>
-			<td>
+			<td class="data">
 				{$recipe.created_by}
 			</td>
-			<td>
+			<td class="data">
 				{$recipe.created_on}
 			</td>
 		</tr>

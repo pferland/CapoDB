@@ -1,1 +1,1 @@
-<h2>CapoDB A Recipes Database.</h2>
+<h2>CapoDB: A Recipes Database.</h2>

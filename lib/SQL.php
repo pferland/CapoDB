@@ -42,6 +42,7 @@ class SQL
         }
         $this->conn = new PDO($dsn, $config['db_user'], $config['db_pwd'], $options);
         $this->conn->query("SET NAMES '".$config['collate']."'");
+        $this->conn->query("USE $this->db");
     }
 
     function checkError()
