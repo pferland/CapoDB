@@ -11,6 +11,8 @@
 	<tr class="data">
 		<td>
 			{$Recipe.description}
+			<br>
+			<br>
 		</td>
 	</tr>
 	<tr class="headers">
@@ -28,6 +30,8 @@
 		{/foreach}
 				</tr>
 			</table>
+			<br>
+			<br>
 		</td>
 	</tr>
 	<tr class="headers">
@@ -36,6 +40,8 @@
 	<tr class="data">
 		<td>
 			{$Recipe.ingredients}
+			<br>
+			<br>
 		</td>
 	</tr>
 	<tr class="headers">
@@ -44,6 +50,8 @@
 	<tr class="data">
 		<td>
 			{$Recipe.steps}
+			<br>
+			<br>
 		</td>
 	</tr>
 </table>
