@@ -51,12 +51,11 @@ class CapoDBFront
 
     function GetRecipe($hash = NULL)
     {
-        $prep = $this->SQL->conn->prepare("SELECT `RecipesIndex`.`id`, `RecipesIndex`.`hash`, RecipesCategories.name as catagory_name, RecipesIndex.created_by, RecipesIndex.created_on, RecipesData.description, RecipesData.ingredients, RecipesData.steps FROM RecipesCategories, RecipesData, RecipesIndex WHERE RecipesData.hash = ? AND RecipesIndex.category = RecipesCategories.id;");
+        $prep = $this->SQL->conn->prepare("SELECT `RecipesIndex`.`hash`, `RecipesIndex`.`title`, RecipesCategories.name as catagory_name, RecipesIndex.created_by, RecipesIndex.created_on, RecipesData.description, RecipesData.ingredients, RecipesData.steps FROM RecipesCategories, RecipesData, RecipesIndex WHERE RecipesIndex.hash = ? AND RecipesData.hash = RecipesIndex.hash AND RecipesIndex.category = RecipesCategories.id;");
         $prep->bindParam(1, $hash, PDO::PARAM_STR);
         $prep->execute();
         $this->SQL->checkError();
-        $fetch = $prep->fetch(2);
-        return $fetch;
+        $this->Recipe = $prep->fetch(2);
     }
 
     function GetRecipePictures($hash = NULL)

@@ -25,8 +25,9 @@ require "lib/CapoDBFront.inc.php"; #CapoDB Front end class
 $CapoDB = new CapoDBFront($WWWconfig);
 
 $CapoDB->GetRecipe($_GET['hash']);
+$CapoDB->GetRecipePictures($_GET['hash']);
 
-if(!$CapoDB->debug)
+if($CapoDB->debug)
 {
     var_dump($CapoDB->Recipe);
     var_dump($CapoDB->RecipePictures);

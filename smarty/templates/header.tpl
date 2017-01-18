@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Raspberry Pi Wather Monitor</title>
+	<title>CapoDB: A Recipe Collection Database</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
